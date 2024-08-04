@@ -70,6 +70,10 @@
 }
 
 @media print {
+    * {
+        print-color-adjust: exact !important;
+    }
+
     .not-print {
         display: none;
     }

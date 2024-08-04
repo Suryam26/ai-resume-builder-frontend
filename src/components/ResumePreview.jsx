@@ -10,7 +10,7 @@ function ResumePreview() {
     return (
         <div
             id="print"
-            className="h-full border-t-[20px] p-14 shadow-lg"
+            className="aspect-[1/1.414] h-full max-w-[794px] border-t-[20px] p-14 shadow-lg"
             style={{ borderColor: resumeInfo?.themeColor }}
         >
             <PersonalDetailPreview resumeInfo={resumeInfo} />

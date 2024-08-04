@@ -27,12 +27,12 @@ function PersonalDetail({ enableNext }) {
             () => {
                 enableNext(true);
                 setIsLoading(false);
-                toast('Resume updated successfully');
+                toast.success('Resume updated successfully');
             },
             (err) => {
                 console.error(err);
                 setIsLoading(false);
-                toast('Something went wrong');
+                toast.error('Something went wrong');
             }
         );
     };

@@ -98,7 +98,7 @@ function Summary({ enableNext }) {
                 </div>
             </form>
 
-            {AISummary && (
+            {AISummary.length > 0 && (
                 <div className="mt-5">
                     <h2 className="text-lg font-bold">Suggestions</h2>
                     {AISummary.map((item, index) => (

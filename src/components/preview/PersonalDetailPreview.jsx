@@ -1,8 +1,10 @@
+import { House, Mail, Phone } from 'lucide-react';
+
 function PersonalDetailPreview({ resumeInfo }) {
     return (
         <div>
             <h2
-                className="font-bold text-xl text-center"
+                className="text-center text-xl font-bold"
                 style={{ color: resumeInfo?.themeColor }}
             >
                 {resumeInfo?.firstName} {resumeInfo?.lastName}
@@ -10,33 +12,57 @@ function PersonalDetailPreview({ resumeInfo }) {
             <h2 className="text-center text-sm font-medium">
                 {resumeInfo?.jobTitle}
             </h2>
-            <h2
-                className="text-center font-normal text-xs"
-                style={{ color: resumeInfo?.themeColor }}
+            <a
+                className="flex items-center justify-center"
+                href={`tel:${resumeInfo?.phone}`}
             >
-                {resumeInfo?.address}
-            </h2>
-
-            <div className="flex justify-between">
+                <Phone
+                    style={{ color: resumeInfo?.themeColor }}
+                    className="mr-1 h-3 w-3"
+                />
                 <h2
-                    className="font-normal text-xs"
+                    className="text-center text-xs font-normal"
                     style={{ color: resumeInfo?.themeColor }}
                 >
                     {resumeInfo?.phone}
                 </h2>
-                <h2
-                    className="font-normal text-xs"
-                    style={{ color: resumeInfo?.themeColor }}
+            </a>
+
+            <div className="flex justify-between">
+                <a
+                    className="flex items-center"
+                    href={`mailto:${resumeInfo?.email}`}
                 >
-                    {resumeInfo?.email}
-                </h2>
+                    <Mail
+                        style={{ color: resumeInfo?.themeColor }}
+                        className="mr-1 h-4 w-4"
+                    />
+                    <h2
+                        className="text-xs font-normal"
+                        style={{ color: resumeInfo?.themeColor }}
+                    >
+                        {resumeInfo?.email}
+                    </h2>
+                </a>
+                <div className="flex items-center">
+                    <House
+                        style={{ color: resumeInfo?.themeColor }}
+                        className="mr-1 h-4 w-4"
+                    />
+                    <h2
+                        className="text-xs font-normal"
+                        style={{ color: resumeInfo?.themeColor }}
+                    >
+                        {resumeInfo?.address}
+                    </h2>
+                </div>
             </div>
             <hr
-                className="border-[1.5px] my-2"
-                style={{ color: resumeInfo?.themeColor }}
+                className="my-2 border-[1.5px]"
+                style={{ borderColor: resumeInfo?.themeColor }}
             />
         </div>
-    )
+    );
 }
 
-export default PersonalDetailPreview
+export default PersonalDetailPreview;

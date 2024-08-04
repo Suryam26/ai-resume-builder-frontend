@@ -16,7 +16,10 @@ function ViewResumePage() {
                     it now.
                 </h1>
             </div>
-            <div id="print-area" className="m-10 md:mx-20 lg:mx-36">
+            <div
+                id="print-area"
+                className="m-10 flex justify-center md:mx-20 lg:mx-36"
+            >
                 <ResumePreview />
             </div>
         </ResumeContextProvider>
