@@ -84,7 +84,7 @@ function Summary({ enableNext }) {
                     required
                     name="summary"
                     className="mt-5 h-32"
-                    defaultValue={summary}
+                    value={summary}
                     onChange={(e) => handleChange(e.target.value)}
                 />
                 <div className="mt-3 flex justify-end">
