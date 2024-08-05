@@ -58,7 +58,7 @@ function Experience({ enableNext }) {
         if (resumeInfo?.experience.length === 0) {
             setExperienceList([{ ...experienceFormFields }]);
         } else {
-            setExperienceList(resumeInfo?.experience);
+            setExperienceList(resumeInfo?.experience.map(({ id, ...fields }) => fields));
         }
     }, []);
 

@@ -50,7 +50,7 @@ function Skills({ enableNext }) {
         if (resumeInfo?.skills.length === 0) {
             setSkillList([{ ...skillsFormFields }]);
         } else {
-            setSkillList(resumeInfo?.skills);
+            setSkillList(resumeInfo?.skills.map(({ id, ...fields }) => fields));
         }
     }, []);
 

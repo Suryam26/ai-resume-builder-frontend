@@ -50,7 +50,7 @@ function Education({ enableNext }) {
         if (resumeInfo?.education.length === 0) {
             setEducationList([{ ...educationFormFields }]);
         } else {
-            setEducationList(resumeInfo?.education);
+            setEducationList(resumeInfo?.education.map(({ id, ...fields }) => fields));
         }
     }, []);
 
